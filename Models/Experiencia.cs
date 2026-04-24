@@ -7,10 +7,10 @@ namespace MeuCurriculo.Models
 {
     public class Experiencia
     {
-        public string Empresa { get; set; } 
-        public string Cargo { get; set; }
-        public string Início { get; set; } = "Atual";
-        public string Fim { get; set; }
-        public string Descricao { get; set; }
+        public String? Empresa { get; set; } 
+        public String? Cargo { get; set; }
+        public String? Inicio { get; set; } = "Atual";
+        public String? Fim { get; set; }
+        public String? Descricao { get; set; }
     }
 }

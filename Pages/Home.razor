@@ -1,7 +1,65 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Currículo | Dev .NET</PageTitle>
 
-<h1>Hello, world!</h1>
+<div class="container py-4">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="text-center p-4 bg-light rounded-3 mb-4 shadow-sm">
+                <img src="https://lh3.googleusercontent.com/d/1hmjgD7_y4cmkJYT3abenYr6MKBG6DQJp" 
+                     class="rounded-circle mb-3"
+                     width="120"
+                     style="object-fit: cover; aspect-ratio: 1/1;" />
+                <h3 class="fw-bold">Fábio Zanini</h3>
+                <p class="text-muted" style="font-size: 0.9rem;">
+                    Desenvolvedor de Software em Formação (ADS) | Transição de Carreira: Administração para Tech | JavaScript | SQL | Ex-Analista de Risco
+                </p>
+            </div>
+        </div>
 
-Welcome to your new app.
+        <div class="col-lg-8">
+            <h2 class="mb-4 border-bottom pb-2">Experiência Profissional</h2>
+            
+            @foreach (var exp in MinhasExperiencias)
+            {
+                @* O segredo está dentro deste componente abaixo *@
+                <ExperienciaCard Dados="exp" />
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    private List<Experiencia> MinhasExperiencias = new()
+    {
+        new Experiencia {
+            Empresa = "FZ Negócios Digitais Ltda",
+            Cargo = "Fundador & Estrategista Digital",
+            Inicio = "2021",
+            Fim = "Atual",
+            Descricao = """
+                - Gestão integral de um negócio digital com foco em infoprodutos e marketing de afiliados, gerando um faturamento superior a R$ 2 milhões através de estratégias de vendas online.
+
+                - Gerenciamento de CMS (WordPress), análise de métricas de tráfego (Google Analytics/Ads), automação de e-mail marketing e otimização de SEO.
+
+                - Monitoramento constante de KPIs (ROI, Taxa de Conversão, CTR) para tomada de decisão e otimização de campanhas.
+
+                - Desenvolvimento e lançamento de produtos digitais, definindo público-alvo, pricing e funis de venda.
+                """
+        },
+        new Experiencia {
+            Empresa = "Sympla",
+            Cargo = "Analista de Risco",
+            Inicio = "2019",
+            Fim = "2021",
+            Descricao = "Atuação focada na mitigação de riscos operativos através da análise de grandes volumes de dados cadastrais e comportamento de usuários. Responsável pelo mapeamento de processos e implementação de melhorias em segurança sistêmica, utilizando visão analítica para interpretar alertas automáticos e padrões de dados."
+        },
+        new Experiencia {
+            Empresa = "AlmaViva do Brasil",
+            Cargo = "Assistente Antifraude Segurança Corporativa",
+            Inicio = "2018",
+            Fim = "2019",
+            Descricao = "Foco em Business Intelligence aplicado à segurança corporativa. Responsável pela extração e transformação de dados brutos em relatórios estratégicos utilizando análise avançada de dados (Excel/Cruzamento de bases). Desenvolvi ferramentas de monitoramento de produtividade que otimizaram a eficiência operacional da equipe através da análise de indicadores sistêmicos."
+        },
+    };
+}
