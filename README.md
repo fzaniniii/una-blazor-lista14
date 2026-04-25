@@ -1,14 +1,14 @@
 # 📄 Currículo Interativo & Portfólio Profissional - Blazor
 
 ## 👤 Identificação
-- [cite_start]**Nome Completo:** Fábio Henrique Zanini Ferreira [cite: 57]
-- [cite_start]**Curso:** Análise e Desenvolvimento de Sistemas (ADS) - Centro Universitário UNA [cite: 57]
+- **Nome Completo:** Fábio Henrique Zanini Ferreira [cite: 57]
+- **Curso:** Análise e Desenvolvimento de Sistemas (ADS) - Centro Universitário UNA [cite: 57]
 - **Instituição:** UNA Belo Horizonte
 
 ---
 
 ## 🚀 Guia de Execução
-[cite_start]Para rodar este projeto localmente no seu computador via terminal, siga os passos abaixo[cite: 60]:
+Para rodar este projeto localmente no seu computador via terminal, siga os passos abaixo[cite: 60]:
 
 1. **Certifique-se de ter o .NET SDK instalado** (Versão 8.0 ou superior).
 2. **Abra o terminal** na pasta raiz do projeto (`MeuCurriculo`).
